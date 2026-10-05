@@ -94,7 +94,7 @@ nav a:hover { color: var(--green-dark); }
   font-size: 50px;
   
   margin-top: 20px;
-  background: var(--green);
+  background: var(--green-soft);
   text-align: center;
 }
 
@@ -160,7 +160,7 @@ nav a:hover { color: var(--green-dark); }
   box-shadow: 0 15px 30px rgba(49,91,67,.2);
 }
 
-/* PROBLEMA E SOLUÇÃO: SEM FOTO */
+
 .text-section {
   padding: 105px 8vw;
   border-top: 1px solid var(--line);
