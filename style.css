@@ -26,7 +26,7 @@ a { color: inherit; text-decoration: none; }
   position: sticky;
   top: 0;
   z-index: 20;
-  height: 82px;
+  height: 60px;
   padding: 0 7vw;
   display: flex;
   align-items: center;
@@ -51,16 +51,7 @@ nav {
   font-size: .86rem;
 }
 
-nav a:hover { color: var(--green-dark); }
 
-.nav-cta {
-  background: var(--green-dark);
-  color: white;
-  padding: 11px 19px;
-  border-radius: 30px;
-  font-size: .82rem;
-  font-weight: 600;
-}
 
 .hero {
   min-height: calc(100vh - 82px);
@@ -356,16 +347,16 @@ nav a:hover { color: var(--green-dark); }
 }
 
 footer {
-  padding: 25px 8vw;
+  padding: 15px 8vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: var(--muted);
-  font-size: .75rem;
+  font-size: .80rem;
 }
 
 footer img {
-  width: 65px; height: 34px;
+  width: 61px; height: 30px;
   object-fit: cover;
   mix-blend-mode: multiply;
 }
