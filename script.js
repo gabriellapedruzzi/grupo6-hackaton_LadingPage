@@ -51,3 +51,46 @@
 
   showSlide(0);
 })();
+
+// FORMULÁRIO DE CONTATO — FIO
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("#contact-form");
+  const status = document.querySelector("#contact-status");
+
+  if (!form || !status) return;
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const name = document.querySelector("#contact-name").value.trim();
+    const email = document.querySelector("#contact-email").value.trim();
+    const subject = document.querySelector("#contact-subject").value.trim();
+    const message = document.querySelector("#contact-message").value.trim();
+
+    if (!name || !email || !subject || !message) {
+      status.textContent = "Preencha todos os campos.";
+      return;
+    }
+
+    const destination = "gabriellapedruzzi@gmail.com";
+
+    const emailSubject = encodeURIComponent(
+      `[Contato pelo site Fio] ${subject}`
+    );
+
+    const emailBody = encodeURIComponent(
+      `Nome: ${name}\n` +
+      `E-mail para resposta: ${email}\n\n` +
+      `Mensagem:\n${message}`
+    );
+
+    const mailtoLink =
+      `mailto:${destination}?subject=${emailSubject}&body=${emailBody}`;
+
+    status.textContent =
+      "Abrindo seu aplicativo de e-mail para você enviar a mensagem.";
+
+    window.location.href = mailtoLink;
+  });
+});
