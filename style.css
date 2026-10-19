@@ -372,6 +372,7 @@ nav {
 .value-space {
   min-height: 35px !important;
   background: rgba(49,91,67,.04);
+  font-size: 30px;
 }
 
 .confirm {
