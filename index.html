@@ -69,44 +69,40 @@
       <div class="text-placeholder section-title">COMO FUNCIONA</div>
     </div>
 
-    <div class="steps">
+    <div class="carousel" aria-roledescription="carrossel" aria-label="Como funciona">
+      <button class="carousel-button carousel-prev" type="button" aria-label="Imagem anterior">&#8592;</button>
 
-      <article class="step">
-        <img class="photo-placeholder" src="imagens/foto-04.png" alt="Foto 4">
-     
-        <div class="step-writing">
-          <div class="text-placeholder writing-title">Cadastre-se</div>
-         
+      <div class="carousel-window">
+        <div class="carousel-track">
+          <article class="step carousel-slide" aria-label="1 de 4">
+            <div class="image-placeholder">Imagem 1</div>
+            <div class="step-writing"><div class="text-placeholder writing-title">Cadastre-se</div></div>
+          </article>
+          <article class="step carousel-slide" aria-label="2 de 4">
+            <div class="image-placeholder">Imagem 2</div>
+            <div class="step-writing"><div class="text-placeholder writing-title">Chamados</div></div>
+          </article>
+          <article class="step carousel-slide" aria-label="3 de 4">
+            <div class="image-placeholder">Imagem 3</div>
+            <div class="step-writing"><div class="text-placeholder writing-title">Ex. do Chamado</div></div>
+          </article>
+          <article class="step carousel-slide" aria-label="4 de 4">
+            <div class="image-placeholder">Imagem 4</div>
+            <div class="step-writing"><div class="text-placeholder writing-title">Regitrar</div></div>
+          </article>
         </div>
-      </article>
+      </div>
 
-      <article class="step">
-        <img class="photo-placeholder" src="imagens/foto-03.png" alt="Foto 3">
-     
-        <div class="step-writing">
-          <div class="text-placeholder writing-title">Chamados</div>
-         
+      <button class="carousel-button carousel-next" type="button" aria-label="Próxima imagem">&#8594;</button>
+      <div class="carousel-footer">
+        <div class="carousel-dots" aria-label="Escolher etapa">
+          <button class="carousel-dot is-active" type="button" aria-label="Ir para imagem 1" aria-current="true"></button>
+          <button class="carousel-dot" type="button" aria-label="Ir para imagem 2"></button>
+          <button class="carousel-dot" type="button" aria-label="Ir para imagem 3"></button>
+          <button class="carousel-dot" type="button" aria-label="Ir para imagem 4"></button>
         </div>
-      </article>
-
-      <article class="step">
-        <img class="photo-placeholder" src="imagens/foto-02.png" alt="Foto 2">
-     
-        <div class="step-writing">
-          <div class="text-placeholder writing-title">Ex. do Chamado</div>
-          
-        </div>
-      </article>
-
-      <article class="step">
-        <img class="photo-placeholder" src="imagens/foto-01.png" alt="Foto 1">
-    
-        <div class="step-writing">
-          <div class="text-placeholder writing-title">Regitrar</div>
-         
-        </div>
-      </article>
-
+        <span class="carousel-counter" aria-live="polite">1 / 4</span>
+      </div>
     </div>
   </section>
 
@@ -147,6 +143,7 @@
   <span>© 2026 Fio</span>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>
+

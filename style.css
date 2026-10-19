@@ -198,11 +198,95 @@ nav {
   background: var(--green);
 }
 
-.steps {
+.carousel {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 18px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
+
+.carousel-window { overflow: hidden; width: 100%; }
+
+.carousel-track {
+  display: flex;
+  transition: transform 400ms ease;
+  will-change: transform;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 0;
+}
+
+.image-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 21px;
+  border: 1px solid var(--line);
+  background: linear-gradient(145deg, #f0f5ec, #e2ede0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green-dark);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+
+.carousel-button {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: white;
+  color: var(--green-dark);
+  font: inherit;
+  font-size: 1.35rem;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease;
+}
+
+.carousel-button:hover {
+  background: var(--green-dark);
+  color: white;
+}
+
+.carousel-button:focus-visible,
+.carousel-dot:focus-visible {
+  outline: 2px solid var(--green-dark);
+  outline-offset: 3px;
+}
+
+.carousel-footer {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.carousel-dots { display: flex; align-items: center; gap: 9px; }
+
+.carousel-dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #c6d5c7;
+  cursor: pointer;
+}
+
+.carousel-dot.is-active {
+  background: var(--green-dark);
+  transform: scale(1.2);
+}
+
+.carousel-counter { color: var(--muted); font-size: .8rem; }
 
 .step { min-width: 0; }
 
@@ -371,15 +455,10 @@ footer img {
 
   .hero-visual { min-height: 350px; }
 
-  .steps {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 @media (max-width: 520px) {
   .nav-cta { display: none; }
-
-  .steps { grid-template-columns: 1fr; }
 
   .table-head > div,
   .table-row > div {
@@ -391,3 +470,17 @@ footer img {
 
 /* Fotos adicionadas aos quatro espaços de Como funciona. */
 .photo-placeholder { width: 100%; object-fit: cover; display: block; }
+
+
+
+
+@media (max-width: 520px) {
+  .how { padding: 80px 6vw; }
+  .carousel { gap: 8px; }
+  .carousel-button { width: 36px; height: 36px; font-size: 1.1rem; }
+  .step-writing .writing-title { font-size: 21px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track { transition: none; }
+}
